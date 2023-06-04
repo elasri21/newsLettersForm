@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.main-page {
+  background-color: #36384e;
+  margin-bottom: 25px;
+}
+@media (min-width: 768px) {
+  .main-page {
+    height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+  }
+  .main-page .form-container {
+    border-radius: 20px;
+    padding: 15px 15px 15px 30px;
+  }
+  .main-page .form-container .info {
+    width: calc(50% - 20px) !important;
+  }
+  .main-page .form-container .illus {
+    width: calc(50% - 20px) !important;
+    height: 500px;
+  }
+  .main-page .form-container .illus img {
+    height: 100%;
+  }
+  .main-page .form-container .illus img.illus-mob {
+    display: none !important;
+  }
+  .main-page .form-container .illus img.illus-desk {
+    display: block !important;
+  }
+}
+@media (max-width: 767px) {
+  .main-page .form-container .info {
+    order: 2;
+  }
+  .main-page .form-container .illus {
+    order: 1;
+  }
+}
+.main-page .form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  background-color: white;
+}
+.main-page .form-container .info {
+  width: 100%;
+  padding: 40px 20px;
+}
+.main-page .form-container .info h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #242742;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.main-page .form-container .info p {
+  font-size: 16px;
+  color: #242742;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.main-page .form-container .info ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.main-page .form-container .info ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.main-page .form-container .info ul li span {
+  font-size: 16px;
+  color: #242742;
+  font-weight: 400;
+}
+.main-page .form-container .info form label {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  color: #242742;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  position: relative;
+}
+.main-page .form-container .info form label span {
+  opacity: 0;
+  color: #ff6257;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main-page .form-container .info form input {
+  display: block;
+  width: 100%;
+  background: none;
+  outline: none;
+  border: none;
+  transition: .3s;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: .3s;
+  cursor: pointer;
+}
+.main-page .form-container .info form input.email {
+  border: 1px solid #9294a0;
+  margin-bottom: 10px;
+  color: #242742;
+  caret-color: #242742;
+}
+.main-page .form-container .info form input.email::placeholder {
+  color: #9294a0;
+  text-transform: capitalize;
+  transition: .3s;
+}
+.main-page .form-container .info form input.email:focus {
+  border-color: #242742;
+}
+.main-page .form-container .info form input.email:focus::placeholder {
+  opacity: 0;
+}
+.main-page .form-container .info form input.submit-btn {
+  background-image: linear-gradient(to right, #242742, #242742);
+  color: white;
+  text-align: center;
+  text-transform: capitalize;
+}
+.main-page .form-container .info form input.submit-btn:hover {
+  background-image: linear-gradient(to right, #ff6257, orange);
+}
+.main-page .form-container .illus {
+  width: 100%;
+}
+.main-page .form-container .illus img {
+  width: 100%;
+}
+.main-page .form-container .illus img.illus-mob {
+  display: block;
+}
+.main-page .form-container .illus img.illus-desk {
+  display: none;
+}
+.main-page .wrapper {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .main-page .wrapper {
+    height: calc(100vh - 60px);
+    margin: 0 20px;
+  }
+}
+.main-page .wrapper .thanks-page {
+  background-color: white;
+  padding: 50px 30px;
+  border-radius: 20px;
+  max-width: 100%;
+  width: 400px;
+}
+.main-page .wrapper .thanks-page img {
+  display: block;
+  margin-bottom: 20px;
+}
+.main-page .wrapper .thanks-page h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #242742;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.main-page .wrapper .thanks-page p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #242742;
+  margin-bottom: 20px;
+}
+.main-page .wrapper .thanks-page p span {
+  font-weight: 700;
+}
+.main-page .wrapper .thanks-page button {
+  display: block;
+  width: 100%;
+  background: #242742;
+  outline: none;
+  border: none;
+  transition: .3s;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  text-align: center;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+}
+.main-page .wrapper .thanks-page button:hover {
+  background-color: #ff6257;
+}
+
+.attribution {
+  padding-bottom: 30px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=main.css.map */
