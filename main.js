@@ -3,6 +3,7 @@ const thanksPage = document.querySelector(".wrapper");
 const form = document.querySelector("form");
 const dismissBtn = document.querySelector(".dismiss-btn");
 const errorMsg = document.querySelector(".error-msg");
+const userEmail = document.querySelector(".user-email");
 
 form.addEventListener("submit", function(e) {
     e.preventDefault();
@@ -14,6 +15,7 @@ form.addEventListener("submit", function(e) {
         errorMsg.style.opacity = "0";
         formContainer.style.display = "none";
         thanksPage.style.display = "flex";
+        userEmail.textContent = email;
     }
 });
 
